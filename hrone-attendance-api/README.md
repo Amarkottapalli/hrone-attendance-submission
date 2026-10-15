@@ -45,9 +45,3 @@ With the dependencies installed, run `pytest -q`. The focused helper tests cover
 
 1. Run the API against MongoDB 6.0+ and exercise each endpoint.
 2. Test edge cases: duplicate parallel punch-ins, simultaneous punch-outs, overnight shifts, weekend records, joiners mid-month, and tied leaderboard ranks.
-3. Verify `/admin/explain/{endpoint}` plans against the actual dataset.
-4. Do not commit `.env`, secrets, a Dockerfile, virtual environments, or local database files.
-
-## Known limitations to verify
-
-The assignment's hidden dataset and exact MongoDB execution plans are not available in this workspace. Run the included app against MongoDB 6.0+ and validate every aggregation and explain plan before submission; do not treat compilation alone as proof of correctness. Any remaining gaps should be stated honestly in the final submission.
