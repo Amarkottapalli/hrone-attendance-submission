@@ -19,4 +19,4 @@ The starter contains multiple correctness, validation, scale, and concurrency de
 15. **`list_attendance()`** — It sorts only by date, leaks inconsistent ordering for same-day records, and doesn't exclude `_id` consistently. **Fix:** sort by date descending then employee code ascending and serialize API records.
 16. **Missing endpoints** — Punch-out, regularization, all four analytics routes, and explain were unimplemented. **Fix:** implement them against the OpenAPI contract, with atomic updates, audit history, and aggregation pipelines.
 
-Reviewed as sound in concept: using `emp_code` as the business identifier and keeping the two collections separate. The original code's helper functions were not safe to reuse unchanged.
+Reviewed as sound in concept: using `emp_code` as the business identifier and keeping the two collections separate.
